@@ -7,6 +7,7 @@ export class Form extends Component {
 
         this.initialState = {
             color: '',
+            speed: '',
         }
 
         this.state = this.initialState;
@@ -30,6 +31,9 @@ export class Form extends Component {
     return (
       <form onSubmit={this.onSubmit}>
         Color: <input type="text" name="color" onChange={this.tracker} value={this.state.color} ></input>
+        {/* Speed: <input type="text" name="speed" onChange={this.tracker} value={this.state.speed} ></input> */}
+        {/* <button onClick={this.onSubmit}>Obey</button> */}
+
       </form>
     )
   }
