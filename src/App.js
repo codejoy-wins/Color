@@ -84,6 +84,17 @@ class App extends Component {
       "padding-bottom": "1rem",
       "margin": ".4rem",
     }
+    const myStyleSlow = {
+      "background": "#000",
+      "padding": "1rem",
+      "margin": ".2rem",
+      "color": this.state.color,
+    }
+    const myStyleFast = {
+      "background": this.state.color,
+      "padding": "1rem",
+      "margin": ".2rem",
+    }
     if(this.state.speed == "fast"){
       return (
         <div className="App" style = {DynamicStyle}>
@@ -93,7 +104,19 @@ class App extends Component {
           < Form handleSubmit={this.handleSubmit}/>
           <StateDisplay />
             </div>
+            
             <a
+              className="App-link"
+              href="https://www.w3schools.com/colors/colors_names.asp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              List of Acceptable Color Names
+            </a>
+          </header>
+          <div style={myStyleFast}>
+          <button style={myStyle} onClick ={this.slow}> Slow Time </button>
+          <a
               className="App-link"
               href="https://maxjann.com"
               target="_blank"
@@ -101,8 +124,8 @@ class App extends Component {
             >
               Jann Software
             </a>
-          </header>
-          <button style={myStyle} onClick ={this.slow}> Slow Time </button>
+          </div>
+          
         </div>
       );
     }else{
@@ -116,14 +139,25 @@ class App extends Component {
             </div>
             <a
               className="App-link"
-              href="https://maxjann.com"
+              href="https://www.w3schools.com/colors/colors_names.asp"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Jann Software
+              List of Acceptable Color Names
             </a>
           </header>
-          <button style = {myStyle} onClick ={this.slow}> Speed Time </button>
+          <div style = {myStyleSlow}>
+            <button style = {myStyle} onClick ={this.slow}> Speed Time </button>
+            <a
+                className="App-link"
+                href="https://www.maxjann.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Jann Software
+              </a>
+          </div>
+          
         </div>
       );
     }
