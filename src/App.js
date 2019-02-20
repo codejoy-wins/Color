@@ -85,7 +85,7 @@ class App extends Component {
       "margin": ".4rem",
     }
     const myStyleSlow = {
-      "background": "#000",
+      "background": "#282c34",
       "padding": "1rem",
       "margin": ".2rem",
       "color": this.state.color,
